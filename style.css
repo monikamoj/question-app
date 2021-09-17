@@ -1,0 +1,259 @@
+:root {
+  --border-farbe: rgb(22, 21, 21);
+  --text-farbe: white;
+  --body-farbe: #4f7a28;
+  --background-footer-header: rgb(36, 33, 33);
+  --background-farbe: #00a3d7;
+  --icons-farbe: #4f7a28;
+  --blockquote-farbe: orange;
+  --dark-mode-background: black;
+  --dark-mode-text: yellow;
+  --hover-button-farbe: blue;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-farbe);
+  height: 15vh;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+h1 {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-footer-header);
+  width: 150em;
+  border: solid;
+}
+
+img {
+  border-radius: 300px;
+}
+
+body {
+  background-color: var(--body-farbe);
+  font-family: "Roboto", sans-serif;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-farbe);
+  font-family: "Roboto", sans serif;
+  margin-bottom: 2rem;
+  border-style: solid;
+  color: var(--text-farbe);
+  border-color: var(--btext-farbe);
+  padding: 25px 5px 25px 5px;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.questiontags {
+  display: flex;
+  flex-direction: row;
+  gap: 7em;
+}
+
+.questionitem {
+  border-style: solid;
+  background-color: #4f7a28;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8vh;
+  margin-bottom: 22vh;
+  border: solid;
+  height: 5vh;
+  width: 18vh;
+  border-radius: 0px;
+  background: var(--background-farbe);
+  box-shadow: inset 8px 8px 16px #006d90, inset -8px -8px 16px #00d9ff;
+}
+
+.logout:hover {
+  border-radius: 20px;
+  transition: 2000ms;
+  background-color: black;
+}
+
+blockquote p {
+  quotes: "";
+}
+
+blockquote p:before {
+  content: open-quote;
+  color: var(--blockquote-farbe);
+  font: 1.5em/150% Georgia, serif;
+}
+
+blockquote p:after {
+  content: close-quote;
+  color: var(--blockquote-farbe);
+  font: 1.5em/150% Georgia, serif;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6vh;
+  border: solid;
+  height: 5vh;
+  width: 18vh;
+}
+
+button:hover {
+  color: white;
+  background-color: var(--hover-button-farbe);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-footer-header);
+  color: var(--text-farbe);
+  border: solid;
+  position: sticky;
+  left: 0em;
+  right: 0em;
+  bottom: 0vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding-left: 0em;
+  gap: 2em;
+}
+
+ul {
+  display: flex;
+  text-align: center;
+  flex: 1;
+  justify-content: space-around;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+i {
+  display: flex;
+  color: var(--icons-farbe);
+}
+
+img {
+  position: absolute;
+  right: 1.5em;
+  top: -0.8em;
+}
+
+@keyframes bouncer {
+  from,
+  20%,
+  53%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0) scaleY(1.1);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0) scaleY(1.05);
+  }
+
+  80% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0) scaleY(1.02);
+  }
+}
+
+.bookmark {
+  animation: bouncer 7s infinite;
+  transform-origin: center bottom;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  footer,
+  article,
+  h1 {
+    background-color: var(--dark-mode-background);
+    color: var(--dark-mode-text);
+  }
+}
+.current {
+  border-radius: 0px;
+  background: #96d35f;
+  box-shadow: inset 18px 18px 35px #597c38, inset -18px -18px 35px #d4ff86;
+  background: var(--body-farbe);
+  width: 2em;
+  height: 1.5em;
+}
+.submit {
+  margin-left: 12em;
+  margin-bottom: 10em;
+  margin-top: 10em;
+  margin-right: 12em;
+  font-family: inherit;
+}
+
+.submit:focus {
+  background-color: #00a3d7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+}
+
+.formular {
+  display: flex;
+  margin-bottom: 1em;
+  margin-top: 3em;
+  gap: 20px;
+  font-family: inherit;
+}
+
+.aboutme {
+  display: grid;
+  grid-template-rows: 150px;
+  grid-template-columns: 1fr, 2fr;
+  position: relative;
+  font-family: inherit;
+}
+
+.profilefoto {
+  position: absolute;
+  left: 12em;
+  top: 5em;
+}
